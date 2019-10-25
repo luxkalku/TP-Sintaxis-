@@ -6,25 +6,24 @@
 
 
 
-
-char * ingresarCadena(char cadena[]){
-	printf("ingrese una cadena de palabras separadas por el simbolo \% \n");
-	scanf("%s", cadena);
-	return cadena;
-}
-
-void mostrarCadena(char cadena[]){
+void mostrarCadena(char cadena[TOPE_ARRAY]){
 	int i =0;
-	while(cadena[i]!= '\0'){
+	while(cadena[i]!= EOF){
 		while(cadena[i] != '\%'){
-			printf("%s", cadena[i]);
+			printf("%s", &cadena[i]);
 			i++;
 			printf("\n");
 		}
-		printf("\n");
-		
 	}
 }
+
+void ingresarCadena(char cadena[TOPE_ARRAY]){
+	printf("ingrese una cadena de palabras separadas por el simbolo \% \n");
+	gets(cadena);
+	printf("%s", cadena);
+		
+}
+
 
 int main() {
 	char cadena[TOPE_ARRAY];
