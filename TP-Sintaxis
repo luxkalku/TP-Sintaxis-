@@ -1,0 +1,34 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#define TOPE_ARRAY  100
+//Primer paso, que dada una cadena, cuyas palabras están separadas por un %, mostrar palabra a palabra las que se encuentran ahí. 
+
+
+
+
+char * ingresarCadena(char cadena[]){
+	printf("ingrese una cadena de palabras separadas por el simbolo \% \n");
+	scanf("%s", cadena);
+	return cadena;
+}
+
+void mostrarCadena(char cadena[]){
+	int i =0;
+	while(cadena[i]!= '\0'){
+		while(cadena[i] != '\%'){
+			printf("%s", cadena[i]);
+			i++;
+			printf("\n");
+		}
+		printf("\n");
+		
+	}
+}
+
+int main() {
+	char cadena[TOPE_ARRAY];
+	ingresarCadena(cadena);
+	mostrarCadena(cadena);
+	return 0;
+}
